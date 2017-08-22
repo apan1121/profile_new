@@ -1,0 +1,40 @@
+<section class="section_box" rel="<%=key%>">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 section_title">
+                <h2><span class="icon icon-<%=icon%>"></span><%=name%></h2>
+            </div>
+            <div class="col-xs-12 section_content" style="font-size:18px;">
+                <div class="folder_content">
+                    <div class="row">
+                        <% _.each( folderJSON.product,function(product, index){%>
+                        <div class="col-sm-6 product_box_col" rel="<%=index%>">
+                            <div class="product_box">
+                                <div class="type"><%=product.type%></div>
+                                <div class="thumbail imgLiquidFill <%=product.product_photo[0]!=''?'photoGroup':''%>">
+                                    <img src="<%=product.product_photo[0]||noPhoto%>" alt="<%=product.product_name%>">
+                                </div>
+                                <% if (product.product_link!="") {%>
+                                <div class="title"><a href="<%=product.product_link%>" target="_blank"><%=product.product_name%></a></div>
+                                <% } else {%>
+                                <div class="title"><%=product.product_name%></div>
+                                <% }%>
+                                <div class="tags">
+                                    <% _.each(product.tag, function(tag){%>
+                                        <div class="tag"><%=tag%></div>
+                                    <%})%>
+                                </div>
+                                <div class="photo" style="display: none;">
+                                    <% _.each(product.product_photo, function(photo,photo_index){%>
+                                        <a class="groupPhoto" rel="<%=index%>" href="<%=photo%>" title="<%=product.product_name%>"><%=photo_index%></a>
+                                    <%})%>
+                                </div>
+                            </div>
+                        </div>
+                        <%});%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

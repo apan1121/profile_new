@@ -1,0 +1,284 @@
+<section class="section_box" rel="<%=key%>">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 section_title">
+                <h2><span class="icon icon-<%=icon%>"></span> <%=name%></h2>
+            </div>
+            <div class="col-xs-12 section_content" style="font-size:18px;">
+                <div class="job_content">
+                    <div class="timeline_box">
+                        <ul class="timeline_ul">
+                            <% _.each(jobJSON.jobs, function(job){ %>
+                            <li class="timeline_li">
+                                <span></span>
+                                <div class="info">
+                                    <div class="jobBox">
+                                        <div class="logo"><img src="<%=job.company_logo%>"></div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text"><%=lang["company_name"]%></span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text"><%=job.company_name%></span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text"><%=lang["company_title"]%></span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text"><%=job.company_title%></span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text"><%=lang["company_product"]%></span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                    <% _.each(job.company_product, function(product){%>
+                                                        <div><%=product%></div>
+                                                    <%})%>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text"><%=lang["experence"]%></span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                    <% _.each(job.experence, function(experence){%>
+                                                        <div class="tag"><%=experence%></div>
+                                                    <%})%>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time">
+                                    <span>2009.12</span>
+                                    <span>2005.12</span>
+                                </div>
+                            </li>
+                            <% })%>
+<!--                             <li class="timeline_li">
+                                <span></span>
+                                <div class="info">
+                                    <div class="jobBox">
+                                        <div class="logo"><img src="./img/company_logo/tripresso.svg"></div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">公司</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">Tripresso 旅遊咖</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">職務</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">資深網頁工程師</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">產品</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                    <div>Tripresso 旅遊咖團體旅遊比較平台</div>
+                                                    <div>TripSAAS 旅樂同業上架平台</div>
+                                                    <div>Tripresso 官網後台管理系統</div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">經驗</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                    <div class="tag">PHP</div>
+                                                    <div class="tag">CSS</div>
+                                                    <div class="tag">Javascript</div>
+                                                    <div class="tag">NodeJS</div>
+                                                    <div class="tag">Firebase</div>
+                                                    <div class="tag">Redis</div>
+                                                    <div class="tag">MemCache</div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time">
+                                    <span>2009.12</span>
+                                    <span>2005.12</span>
+                                </div>
+                            </li>
+                            <li class="timeline_li">
+                                <span></span>
+                                <div class="info">
+                                    <div class="jobBox">
+                                        <div class="logo"><img src="./img/company_logo/golife.png"></div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">公司</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">GOLiFE 研鼎崧圖</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">職務</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">穿戴式雲端工程師</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">產品</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                                        <div>Fit 雲端健康生活</div>
+                                                                        <div>RUN 運動社群雲端服務</div>
+                                                                        <div>TRAVEL 簡單你的旅遊生活</div>
+                                                                    </span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">經驗</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                                        <div class="tag">PHP</div>
+                                                                        <div class="tag">CSS</div>
+                                                                        <div class="tag">Javascript</div>
+                                                                        <div class="tag">OAuth 2.0 Server</div>
+                                                                        <div class="tag">多語系</div>
+                                                                    </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time">
+                                    <span>2009.12</span>
+                                    <span>2005.12</span>
+                                </div>
+                            </li>
+                            <li class="timeline_li">
+                                <span></span>
+                                <div class="info">
+                                    <div class="jobBox">
+                                        <div class="logo"><img src="./img/company_logo/kinlogo.png"></div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">公司</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">Kincentrix, Inc.</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">職務</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">網頁工程師</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">產品</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                                        <div>Kinoot 親子社群網站</div>
+                                                                        <div>ClassLocker 班雲</div>
+                                                                    </span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">經驗</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                                        <div class="tag">PHP</div>
+                                                                        <div class="tag">CSS</div>
+                                                                        <div class="tag">Javascript</div>
+                                                                    </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time">
+                                    <span>2009.12</span>
+                                    <span>2005.12</span>
+                                </div>
+                            </li>
+                            <li class="timeline_li">
+                                <span></span>
+                                <div class="info">
+                                    <div class="jobBox">
+                                        <div class="logo"><img src="./img/company_logo/joymaster.jpg"></div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">公司</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">極致行動科技</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">職務</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">網頁工程師</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">產品</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                                        <div>明珠三國 官方網站</div>
+                                                                        <div>小額付款金流介接</div>
+                                                                        <div></div>
+                                                                    </span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">經驗</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                                        <div class="tag">PHP</div>
+                                                                        <div class="tag">CSS</div>
+                                                                        <div class="tag">Javascript</div>
+                                                                    </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time">
+                                    <span>2009.12</span>
+                                    <span>2005.12</span>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

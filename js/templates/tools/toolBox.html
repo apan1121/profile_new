@@ -1,0 +1,48 @@
+<section class="section_box" rel="<%=key%>">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 section_title">
+                <h2><span class="icon icon-<%=icon%>"></span> <%=name%></h2>
+            </div>
+            <div class="col-xs-12 section_content" style="font-size:18px;">
+                <div class="tool_content">
+                    <div class="row">
+                        <% _.each(toolJSON.skills, function(item){ %>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="process_box">
+                                <div class="process">
+                                    <div class="process_bar" style="width: <%=item.score%>%;"></div>
+                                    <div class="process_name"><%=item.name%></div>
+                                    <div class="process_score"><%=item.score%>%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <%})%>
+                    </div>
+                    <% _.each(toolJSON.tools, function(val, key){ %>
+                    <div class="flexTable_row">
+                        <div class="flexTable_col flexTable_col_title">
+                            <span class="text"><%=lang[key]||key%></span>
+                        </div>
+                        <% if (key != "developExperience") {%>
+                        <div class="flexTable_col flexTable_col_val">
+                            <span class="text"><%=val.join("、")%></span>
+                        </div>
+                        <% } else {%>
+                        <div class="flexTable_col flexTable_col_val">
+                            <span class="text">
+                                <ol>
+                                    <% _.each(val, function(item_one){ %>
+                                    <li><%=item_one%></li>
+                                    <% })%>
+                                </ol>
+                            </span>
+                        </div>
+                        <% }%>
+                    </div>
+                    <% });%>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

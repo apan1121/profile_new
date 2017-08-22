@@ -1,0 +1,25 @@
+<section class="section_box" rel="<%=key%>">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 section_title">
+                <h2><span class="icon icon-<%=icon%>"></span> <%=name%></h2>
+            </div>
+            <div class="col-xs-12 section_content" style="font-size:18px;">
+                <div class="profile_content">
+                    <% _.each(profileJSON, function(val, key){%>
+                        <% if (["photo","title","intro","socail"].indexOf(key) == -1) {%>
+                        <div class="flexTable_row">
+                            <div class="flexTable_col flexTable_col_title">
+                                <span class="text"><%=lang[key]||key%></span>
+                            </div>
+                            <div class="flexTable_col flexTable_col_val">
+                                <span class="text"><%=val%></span>
+                            </div>
+                        </div>
+                        <% }%>
+                    <% });%>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

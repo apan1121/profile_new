@@ -1,0 +1,126 @@
+<html>
+<head>
+    <title>網頁工程師 陳邦綸 履歷</title>
+    <link rel="shortcut icon" href="image/favicon.ico">
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <meta property='og:image' content='http://apan1121.github.io/profile/image/fr_3087_size880.jpg' />
+    <meta property='og:image:width' content='417' />
+    <meta property='og:image:height' content='527' />
+    <meta property='og:title' content='網站工程師 陳邦綸 履歷' />
+    <meta property='og:description' content='一個喜愛寫程式的小伙子，喜歡用程式解決生活的不便' />
+    <meta property='og:url' content='http://apan1121.github.io/profile/' />
+</head>
+<!--
+<link rel="stylesheet/less" type="text/css" href="css/main.less" />
+<link rel="stylesheet/less" type="text/css" href="css/print.less" media="print">
+<link rel="stylesheet" href="css/font-awesome.css">
+ -->
+<!-- <script src='js/lib/less.min.js'></script> -->
+
+<script>
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+var debug = (getParameterByName("debug") == 1)?true:false;
+var fileStorage = [
+                    "css/loading.css,all",
+                    "css/main.less,all",
+                    "css/rwd.less,(max-width: 800px)",
+                    "css/print.less,print",
+                    "css/icomoon.css,all"];
+for (var i in fileStorage) {
+    var fileData = fileStorage[i].split(",");
+    var file = fileData[0].split(".");
+    var ext = file.pop();
+    var media = fileData[1];
+    var newFilePath = "";
+    if (!debug) {
+        switch (ext) {
+            case "css":
+                file.splice(file.length,0);
+                newFilePath = file.join("")+".min.css";
+                break;
+            case  "less":
+                file.splice(file.length,0);
+                newFilePath = file.join("")+".min.css";
+                break;
+        }
+    } else {
+        newFilePath = fileData[0];
+    }
+
+    switch (ext){
+        case "css":
+        case "less":
+            link = document.createElement( "link" );
+            link.href = newFilePath;
+            link.type = "text/css";
+            if ( debug && ext =="less") {
+
+                link.rel = "stylesheet/less";
+            } else {
+                link.rel = "stylesheet";
+            }
+            link.media = media;
+            document.getElementsByTagName( "head" )[0].appendChild( link );
+            break;
+    }
+    int();
+}
+function int(){
+
+    // script = document.createElement( "script" );
+    // script.src = "js/lib/require.js";
+    // script.dataset.main = "js/app";
+    // document.getElementsByTagName( "head" )[0].appendChild( script );
+
+
+}
+</script>
+
+<body style=''>
+    <div class='preloader'>
+    </div>
+    <div class='loading'>
+        <div class="gauge-loader">
+          Loading…
+        </div>
+    </div>
+    <div class='allContent' style='opacity:0'>
+        <div class='toolBar needTransition'>
+            <div class='nav needTransition'>
+                <div class='navBox'>
+                </div>
+            </div>
+
+            <div class='avatar needTransition'>
+                <span class='img'>
+                    <img src="image/fr_3087_size880.jpg">
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class='mainPage needTransition'>
+
+        </div>
+
+
+        <div class="footer">
+            <div class="printBT btn need-hover" data-hoverclass="btn-a">
+                <i class='icon-printer'></i>
+            </div>
+            <div class="qrcodeBT btn need-hover" data-hoverclass="btn-a">
+                <i class='icon-qrcode'></i>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script data-main="js/app" src="js/lib/require.js"></script>
+</html>

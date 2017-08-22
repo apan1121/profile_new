@@ -1,0 +1,96 @@
+{
+  "baseinfo": {
+    "name": "個人資料",
+    "icon": "user",
+    "data": {
+      "姓名": "陳邦綸",
+      "性別": "男♂",
+      "出生日期": "1985-05",
+      "年齡": "[Age] 歲",
+      "血型": "A",
+      "兵役": "預士 退役",
+      "婚姻": "未婚",
+      "居住地": "台北市 松山區",
+      "興趣": "電影、攝影、漫畫、潛水",
+      "Email": "<a href='mailto:apan1121@gmail.com?Subject=[面試通知]'>apan1121@gmail.com</a>",
+      "GitHub": "<a href='https://github.com/apan1121/' target='_blank'>apan1121</a>",
+      "Linkedin": "<a href='https://www.linkedin.com/in/apan1121' target='_blank'>Pan Lun, Chen</a>"
+    }
+  },
+  "schoolinfo": {
+    "name": "學　　歷",
+    "icon": "edacution",
+    "data": {
+      "研究所": "華梵大學 資訊管理學系 碩士",
+      "大學": "華梵大學 資訊管理學系 學士",
+      "高中": "私立大同高中 普通科"
+    }
+  },
+  "clubexp": {
+    "name": "社團經歷",
+    "icon": "group_half",
+    "data": {
+      "華梵大學": "舞蹈研習社 美術及攝影",
+      "I - Dancing": "FB 社團管理員、攝影",
+      "精舞門 Dance Center": "FB 社團管理員"
+    }
+  },
+  "jobinfo": {
+    "name": "工作經歷",
+    "icon": "suitcase",
+    "data": {
+      "2016.03 - now": "Tripresso 旅遊咖網站工程師",
+      "2015.01 - 2016.02": "GOLiFE 穿戴式雲端工程師",
+      "2011.05 - 2014.11": "嘉應資訊 網頁工程師",
+      "2010.10 - 2011.04": "極致行動 網頁工程師",
+      "2008.06 - 2008.11": "工業技術研究院 約聘研究員",
+      "2007.07 - 2007.08": "芯微科技 暑期工讀"
+    }
+  },
+  "skillinfo": {
+    "name": "技　　能",
+    "icon": "tools",
+    "data": {
+      "開發經驗": "API 製作、小額付款金流介接、社群網站、HTML5 網站開發、第三方網站擷取資料、Mobile Web、MVC、RWD、Multi Language、OAuth2 Server、jQuery Plugin、SVG Animate",
+      "常用語言": "PHP、MySQL、HTML、CSS、Javascript、JSON、XML、Less",
+      "常用工具": "jQuery 及各類 Plugin、CodeIgniter、Yii、Backbone、RequireJS、GIT、Sublime Text、eclipse"
+    }
+  },
+  "productinfo": {
+    "name": "作　　品",
+    "icon": "document",
+    "data": {
+      "近期作品": [
+        "Tripresso 旅遊咖 <a href='http://www.tripresso.com' target='_blank'>團體旅行比價服務</a> (部分)",
+        "GOLiFE <a href='http://run.goyourlife.com' target='_blank'>RUN 雲端服務 (運動手錶)</a> (部分)",
+        "GOLiFE <a href='http://fit.goyourlife.com' target='_blank'>FIT 雲端服務 (生活手環)</a> (部分)",
+        "GOLiFE <a href='http://travel.goyourlife.com' target='_blank'>Travel 雲端服務 (導航POI)</a> (部分)",
+        "GOLiFE 語言檔管理平台（內部使用）",
+        "嘉應資訊 <a href='http://www.kinoot.com/class/index.php' target='_blank'>ClassLocker 班雲</a>",
+        "嘉應資訊 <a href='http://www.kinoot.com' target='_blank'>Kinoot 親子社群網站</a>（部分）",
+        "嘉應資訊 <a href='http://goo.gl/Ug1qri' target='_blank'>zMail - Safe Email for Kids</a>（API）",
+        "興趣 <a href='http://apan1121.github.io/earthquake/' target='_blank'>全球 24 小時地震資訊</a>",
+        "興趣 <a href='http://apan1121.github.io/WYSIWYG2Markdown/' target='_blank'>WYSIWYG 轉 Markdown</a>"
+      ],
+      "過去作品": [
+        "極致行動 明珠三國 官方網站（季節性改版）",
+        "極致行動 小額付款金流介接（API）",
+        "極致行動 樂透中了沒（API）",
+        "海軍司令部 電腦報修平台",
+        "芯微科技 台灣創意設計中心出差勤系統（部分）",
+        "研究所 於視訊監控中利用背景學習進行前景偵測",
+        "大學 RFID 校園導覽系統",
+        "大學 論文管理系統",
+        "大學 寵物醫院管理系統",
+        "接案 信義國小數位學習網",
+        "興趣 Travian升級計算器",
+        "興趣 噗浪投票機"
+      ]
+    }
+  },
+  "autobiography": {
+    "name": "自　　傳",
+    "icon": "pencil",
+    "data": {}
+  }
+}

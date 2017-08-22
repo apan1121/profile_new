@@ -1,0 +1,136 @@
+<section class="section_box" rel="<%=key%>">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 section_title">
+                <h2><span class="icon icon-<%=icon%>"></span> <%=name%></h2>
+            </div>
+            <div class="col-xs-12 section_content" style="font-size:18px;">
+                <div class="education_content">
+                    <div class="timeline_box">
+                        <ul class="timeline_ul">
+                            <% _.each(educationJSON.education, function(education){%>
+                            <li class="timeline_li">
+                                <span></span>
+                                <div class="info">
+                                    <div class="schoolBox">
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text"><%=lang["school_name"]%></span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text"><%=education.school_name%></span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text"><%=lang["educ_title"]%></span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text"><%=education.educ_title%></span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text"><%=lang["experence"]%></span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                    <% _.each(education.experence, function(experence){%>
+                                                        <div><%=experence%></div>
+                                                    <%});%>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time">
+                                    <span><%=education.startDate%></span>
+                                    <span><%=education.endDate%></span>
+                                </div>
+                            </li>
+                            <% })%>
+                            <!--
+                            <li class="timeline_li">
+                                <span></span>
+                                <div class="info">
+                                    <div class="schoolBox">
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">學校</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">華梵大學</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">學歷</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">資訊管理學系碩士</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">經驗</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                    <div>資料庫系統 助教</div>
+                                                    <div>數位影像處理分析</div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time">
+                                    <span>2009.12</span>
+                                    <span>2005.12</span>
+                                </div>
+                            </li>
+                            <li class="timeline_li">
+                                <span></span>
+                                <div class="info">
+                                    <div class="schoolBox">
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">學校</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">華梵大學</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">學歷</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">資訊管理學系碩士</span>
+                                            </div>
+                                        </div>
+                                        <div class="flexTable_row">
+                                            <div class="flexTable_col flexTable_col_title">
+                                                <span class="text">經驗</span>
+                                            </div>
+                                            <div class="flexTable_col flexTable_col_val">
+                                                <span class="text">
+                                                    <div>資料庫系統 助教</div>
+                                                    <div>數位影像處理分析</div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time">
+                                    <span>2009.12</span>
+                                    <span>2005.12</span>
+                                </div>
+                            </li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,17 @@
+<div class="menu_flex">
+    <div class="menu_top">
+        <% _.each(plugin, function(item){ %>
+            <div class="menu_button" rel="<%=item.key%>">
+                <span class="icon icon-<%=item.icon%>"></span>
+            </div>
+        <%})%>
+    </div>
+    <div class="menu_bottom" style="display: none;">
+        <div class="menu_button active">
+            <span class="icon icon-printer"></span>
+        </div>
+        <div class="menu_button">
+            <span class="icon icon-qrcode"></span>
+        </div>
+    </div>
+</div>

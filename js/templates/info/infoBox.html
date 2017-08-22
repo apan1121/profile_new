@@ -1,0 +1,30 @@
+<div class="info_flex">
+    <div class="avatar_box">
+        <div class="avatar_wrapper">
+            <div class="avatar_img">
+                <img src="<%=ProfileJSON.photo%>">
+            </div>
+            <div class="avatar_intro">
+                <div class="avatar_name">
+                    <%=ProfileJSON.name%>
+                </div>
+                <div class="avatar_title">
+                    <%=ProfileJSON.title%>
+                </div>
+                <div class="avatar_location">
+                    <i class="material-icons icon">&#xE0C8;</i> <%=ProfileJSON.location%>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="intro_box scrollbar-inner">
+        <%=ProfileJSON.intro%>
+    </div>
+    <div class="social_box">
+        <%_.each(ProfileJSON.socail, function(link, key){%>
+        <div class="social_icon">
+            <a href="<%=link%>" target="_blank" title="<%=key%>"><span class="icon-<%=key%>"></span></a>
+        </div>
+        <%})%>
+    </div>
+</div>
